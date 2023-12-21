@@ -1,0 +1,38 @@
+#outside_container{
+    text-align: center;
+    background-color: rgb(252, 185, 185);
+}
+
+.memory_container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 120px);
+    grid-template-rows: repeat(4, 90px);
+    transition: transform 1s ease;
+    perspective: 600px;
+    transform-style: preserve-3d;
+    gap: 1em;
+    width: 100%;
+    height: 100%;
+}
+
+.memory_box{
+    appearance: none;
+    transition: transform .5s ease;
+    border-radius: 10px;
+    background-image: url(Screenshot_593.png);
+    background-size:cover;
+    background-position: center;
+    cursor: pointer;
+}
+.memory_box:checked{
+    transform: rotateY(180deg);
+    background-image: url(Screenshot_592.png);
+    background-size: cover;
+    background-position: center;
+    transition: transform .5s ease;
+}
+
+.display_back{
+    position: absolute;
+}
